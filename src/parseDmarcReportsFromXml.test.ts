@@ -30,6 +30,11 @@ describe("parseDmarcReportsFromXml", () => {
     "utf-8"
   );
 
+  const emptySpXml = readFileSync(
+    join(__dirname, "./test/fixtures/xml/report-empty-sp.xml"),
+    "utf-8"
+  );
+
   it("should parse a single valid DMARC report", async () => {
     const result = await parseDmarcReportsFromXml([validXml]);
     expect(result.totalReports).toBe(1);
@@ -85,5 +90,11 @@ describe("parseDmarcReportsFromXml", () => {
     await expect(
       parseDmarcReportsFromXml([validXml, invalidXml])
     ).rejects.toThrow();
+  });
+
+  it("should parse a DMARC report with an empty sp in policy_published", async () => {
+    const result = await parseDmarcReportsFromXml([spfFailXml]);
+    expect(result.failures).toHaveLength(0);
+    expect(result).toMatchSnapshot();
   });
 });
