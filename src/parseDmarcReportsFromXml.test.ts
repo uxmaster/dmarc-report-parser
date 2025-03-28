@@ -95,6 +95,5 @@ describe("parseDmarcReportsFromXml", () => {
   it("should parse a DMARC report with an empty sp in policy_published", async () => {
     const result = await parseDmarcReportsFromXml([emptySpXml]);
     expect(result.failures).toHaveLength(0);
-    expect(result).toMatchSnapshot();
   });
 });

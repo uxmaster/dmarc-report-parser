@@ -37,7 +37,7 @@ const ReportMetadataType = zodToCamelCase(
 
 const AlignmentType = z.enum(["r", "s"]);
 
-const DispositionType = z.enum(["none", "quarantine", "reject"]);
+const DispositionType = z.enum(["none", "quarantine", "reject", ""]);
 
 const PolicyPublishedType = zodToCamelCase(
   z.object({
