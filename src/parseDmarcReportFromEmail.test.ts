@@ -27,6 +27,17 @@ describe('parseDMARCReport', () => {
     expect(result.totalReports).toBeGreaterThan(0);
   });
 
+    it('should parse a DMARC report from a raw email with an XML file without XML declaration', async () => {
+    const testRawEmail = readFileSync(join(__dirname, "./test/fixtures/email/email-source-without-xml-declaration.txt"), "utf-8");
+
+    const result = await parseDmarcReportFromEmail(testRawEmail);
+
+    expect(result).toHaveProperty('totalReports');
+    expect(result).toHaveProperty('totalFailures');
+    expect(result).toHaveProperty('failures');
+    expect(result.totalReports).toBeGreaterThan(0);
+  });
+
   it('should return an empty result for an email without a DMARC report', async () => {
     const emptyEmail = 'Subject: Test Email\r\n\r\nThis is a test email without a DMARC report.';
     await expect(parseDmarcReportFromEmail(emptyEmail)).rejects.toThrowError();
@@ -36,4 +47,6 @@ describe('parseDMARCReport', () => {
     const invalidEmail = 'This is not a valid email';
     await expect(parseDmarcReportFromEmail(invalidEmail)).rejects.toThrowError();
   });
+
+
 });

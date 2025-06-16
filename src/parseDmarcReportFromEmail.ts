@@ -53,7 +53,7 @@ export async function parseDmarcReportFromEmail(rawEmail: string): Promise<Dmarc
   const xmlFiles = extractedContents
     .flat()
     .filter(
-      (content) => typeof content === "string" && content.startsWith("<?xml")
+      (content) => typeof content === "string" && (content.startsWith("<?xml") || content.startsWith("<feedback"))
     );
 
   if (xmlFiles.length === 0) {

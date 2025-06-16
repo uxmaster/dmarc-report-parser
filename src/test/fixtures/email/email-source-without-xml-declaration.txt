@@ -1,0 +1,56 @@
+Return-path: <SRS0=4082=y5=wp.pl=dmarc-support@enabla.pl>
+Envelope-to: dmarc@drstypula.pl
+Delivery-date: Sat, 14 Jun 2025 23:42:06 +0000
+Received: from mx3.wp.pl ([212.77.101.9])
+	by enabla.pl with esmtps (TLS1.2:ECDHE_SECP256R1__RSA_SHA512__AES_256_GCM:256)
+	(envelope-from <dmarc-support@wp.pl>)
+	id 1uQaVi-0028AW-IG
+	for dmarc@drstypula.pl;
+	Sat, 14 Jun 2025 23:42:06 +0000
+Received: (wp-smtpd smtp.wp.pl 18254 invoked from network); 15 Jun 2025 01:42:05 +0200
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=wp.pl; s=20241105;
+          t=1749944525; bh=d4lGSKQpvfkk94ZlVn4V3gvwNDKpiJIvzaHLJzck/s0=;
+          h=From:To:Subject;
+          b=QcdPwN2w9b6u2eEtONAUXCLgUwrA6oMd/4dVIFMWYgsOQ52WNL1idMKff4FgFypRu
+           2eCdQJdnblFGSacSamrI5+yTlly8EJ+duhCwPVTP0RztreGIwMq6Kzi/oDDEwJBsqc
+           urFPByu80sHBoUuJMafOuT1IC/QmHdJ2FcnhWBq4hDQdN1u/FtsDFRmSabTlkba4Xv
+           NMBsn8RDYkMtEULn6cLLU+URAEJ1TY6eDU9zPLs6Pq/3WwN1GhygQC5b1X8kkLHWkd
+           PmEZx1X6baHE8OcUS82cIrD5Xon57+p6ef+xIAE8J2fwQZ54lZ9sM+iqeYOvGI1Z3E
+           wqrr8BSN5ShgQ==
+Received: from unknown (HELO localhost) ([unknown])
+          (envelope-sender <dmarc-support@wp.pl>)
+          by smtp.wp.pl (WP-SMTPD) with SMTP
+          for <dmarc@drstypula.pl>; 15 Jun 2025 01:42:05 +0200
+Date: Sun, 15 Jun 2025 01:42:05 +0200
+Message-ID: <dcc4c4a8f0784717a7a260ff971bce35@grupawp.pl>
+X-WP-FOLDER: inbox
+From: dmarc-support@wp.pl
+To: dmarc@drstypula.pl
+Subject: Report Domain: drstypula.pl Submitter: wp.pl Report-ID: 1749944525.735037284
+Content-Type: multipart/mixed; 
+ boundary="part5af59bbf72c911.10496558"
+X-WP-MailID: 75efce490d496a4545e21f18ea751697
+X-WP-AV: skaner antywirusowy Poczty Wirtualnej Polski
+Received-SPF: pass client-ip=212.77.101.9; envelope-from=dmarc-support@wp.pl; helo=mx3.wp.pl
+X-SRS: Sender address rewritten from <dmarc-support@wp.pl> to <SRS0=4082=y5=wp.pl=dmarc-support@enabla.pl> by enabla.pl.
+
+This is a multi-part message in MIME format.
+
+--part5af59bbf72c911.10496558
+Content-Type: application/zip; name="wp.pl!drstypula.pl!1749852000!1749938400.xml.zip"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+ filename="wp.pl!drstypula.pl!1749852000!1749938400.xml.zip"
+
+UEsDBBQACAAIAAAAAAAAAAAAAAAAAAAAAAAsAAAAd3AucGwhZHJzdHlwdWxhLnBsITE3NDk4NTIw
+MDAhMTc0OTkzODQwMC54bWycU9GO4jAM/KKroZSDSpZ1fxKZxIVo2yRK0tvbvz+1CQUO6R72KZ7x
+GM8YFQcRc2H9QRgl+JjVJJkNZyY0nEVFdlchvMjVOtqfuv58bHe7HUJhUJxZ6f5w7hZ6wQjPoz5e
+leNJ6DM0YUTYMMrEdiQzcdQ/0hyW9b+qqLRQ/uTISnuXWWdl3eCrvJhNm/xdd89jq7+uO7bH5nQ4
+7g6n9twhPPpb/cge/Gj1lwrzZbTpJobQ+ImtIxNT/grzyOveSiKbDztRRCgFcgrDCpcXAznvBCEQ
+pnudAmHQmfbL0ZYC4X1nFO3j8vpPwuTnqEXZQPu+b9ru1Oz75ucZ4dFA7WeXqUUoxT2G/OZx5rzG
+sCn4ZLP1rjp5ZnC1HzglhJJkCVDwGgXefxFWd9aIy3awEhPhTdhIVEP00z8He+4gvAzxnG8qSprH
+nMre/9+8SKu5CqrLYv0b02UQXq3A/W+A7WP5GwAA//9QSwcIxSpL9GUBAAA3AwAAUEsBAhQAFAAI
+AAgAAAAAAMUqS/RlAQAANwMAACwAAAAAAAAAAAAAAAAAAAAAAHdwLnBsIWRyc3R5cHVsYS5wbCEx
+NzQ5ODUyMDAwITE3NDk5Mzg0MDAueG1sUEsFBgAAAAABAAEAWgAAAL8BAAAAAA==
+
+--part5af59bbf72c911.10496558--
