@@ -64,8 +64,8 @@ const PolicyOverrideType = z.enum([
 
 const PolicyOverrideReason = zodToCamelCase(
   z.object({
-    type: PolicyOverrideType,
-    comment: z.string().optional(),
+    type: singleItem(PolicyOverrideType),
+    comment: singleItem(z.string()).optional(),
   })
 );
 

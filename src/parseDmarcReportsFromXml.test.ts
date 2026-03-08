@@ -35,6 +35,11 @@ describe("parseDmarcReportsFromXml", () => {
     "utf-8"
   );
 
+  const dkimFailXmlReason = readFileSync(
+    join(__dirname, "./test/fixtures/xml/report-dkim-fail-reason.xml"),
+    "utf-8"
+  );
+
   it("should parse a single valid DMARC report", async () => {
     const result = await parseDmarcReportsFromXml([validXml]);
     expect(result.totalReports).toBe(1);
@@ -94,6 +99,11 @@ describe("parseDmarcReportsFromXml", () => {
 
   it("should parse a DMARC report with an empty sp in policy_published", async () => {
     const result = await parseDmarcReportsFromXml([emptySpXml]);
+    expect(result.failures).toHaveLength(0);
+  });
+
+  it("should parse a DMARC report with failed DKIM with a reason", async () => {
+    const result = await parseDmarcReportsFromXml([dkimFailXmlReason]);
     expect(result.failures).toHaveLength(0);
   });
 });
